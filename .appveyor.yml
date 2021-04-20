@@ -1,0 +1,39 @@
+image: Visual Studio 2019
+platform: x64
+skip_tags: true
+branches:
+  only:
+    - master
+init:
+  - ps: '$env:PB3D_TAG=''PB3D-''+(get-date -format "yyyyMMddHH")'
+build:
+  parallel: true
+  verbosity: minimal
+install:
+  - set QTDIR=C:\Qt\5.15.2\msvc2019_64
+  - set PATH=%QTDIR%\bin;%PATH%
+  - cmd: call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
+build_script:
+  - qmake -config release src/PB3D.pro
+  - nmake
+after_build:
+  - windeployqt release/PB3D.exe
+  - cmd: cp LICENSE release/LICENSE.txt
+  - cmd: cp README.md release/README.md
+  - rm release/*.obj
+  - rm release/*.cpp
+  - rm release/*.h
+  - rm release/*.res
+  - cd release
+  - 7z a PB3D.zip *
+artifacts:
+  - path: release\PB3D.zip
+    name: PB3D
+deploy:
+  - provider: GitHub
+    tag: $(PB3D_TAG)
+    release: $(PB3D_TAG)
+    auth_token:
+      secure: aru/WS5nguUrXfgv5bOMpDecMMzKdcBvQe5FcgY6CWva4aCHezn+rEWM0b4mllHo
+    artifact: PB3D
+    force_update: true

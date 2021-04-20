@@ -1,0 +1,9 @@
+build*
+src/.vs
+src/debug
+src/release
+src/FMC.v*
+src/FMC.pro.user
+src/FMC_*
+src/.qmake.stash
+src/ui_*

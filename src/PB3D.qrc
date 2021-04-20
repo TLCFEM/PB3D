@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../res/UCBLACK.svg</file>
+        <file>../res/UC.ico</file>
+    </qresource>
+</RCC>
