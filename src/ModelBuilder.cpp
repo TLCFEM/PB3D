@@ -874,5 +874,8 @@ void ModelBuilder::on_button_run_clicked() {
 		QMessageBox msg(QMessageBox::Critical, tr("Error"), tr("Please selectc the correct executable first."), QMessageBox::Ok, this);
 		msg.exec();
 	}
-	else { }
+    else {
+        QProcess process;
+        process.start(path, QStringList() << ui->label_exe->text());
+    }
 }
