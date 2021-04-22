@@ -889,10 +889,11 @@ void ModelBuilder::on_button_run_clicked() {
             pwd.cdUp();
             path.prepend(" && ");
             path.prepend(pwd.absolutePath());
-            path.prepend("cmd.exe /C cd ");
+            path.prepend("/C cd ");
 			path.append(' ');
             path.append(saved_file_name);
-			process.startDetached(path.toStdString().c_str());
+            QProcess process;
+            process.startDetached("cmd.exe", QStringList() << path);
 		}
 	}
 }

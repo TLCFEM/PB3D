@@ -115,7 +115,6 @@ private:
 
 	void updateAnalysisSetting() const;
 
-	QString saved_file_name;
-	QProcess process;
+    QString saved_file_name;
 };
 #endif // MODELBUILDER_H
