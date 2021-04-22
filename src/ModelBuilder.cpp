@@ -876,16 +876,22 @@ void ModelBuilder::on_button_run_clicked() {
 	}
 	else {
 		if(saved_file_name.isEmpty()) {
-			QMessageBox msg(QMessageBox::Critical, tr("Error"), tr("Please save the model first."), QMessageBox::Ok, this);
-			msg.exec();
-		}
-		else {
-			path.prepend("cmd.exe /C ");
+            QMessageBox msg(QMessageBox::Information, tr("Note"), tr("Please save the model first."), QMessageBox::Ok, this);
+            msg.exec();
+        }
+        writeOutput();
+        if(saved_file_name.isEmpty()) {
+            QMessageBox msg(QMessageBox::Critical, tr("Error"), tr("Fail to load the file."), QMessageBox::Ok, this);
+            msg.exec();
+        }
+        else {
+            QDir pwd(saved_file_name);
+            pwd.cdUp();
+            path.prepend(" && ");
+            path.prepend(pwd.absolutePath());
+            path.prepend("cmd.exe /C cd ");
 			path.append(' ');
-			path.append(saved_file_name);
-			QDir pwd(saved_file_name);
-			pwd.cdUp();
-			process.setWorkingDirectory(pwd.absolutePath());
+            path.append(saved_file_name);
 			process.startDetached(path.toStdString().c_str());
 		}
 	}

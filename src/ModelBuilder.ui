@@ -4303,7 +4303,7 @@
                  </size>
                 </property>
                 <property name="text">
-                 <string>Select</string>
+                 <string>Select EXE</string>
                 </property>
                </widget>
               </item>
