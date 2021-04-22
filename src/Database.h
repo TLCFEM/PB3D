@@ -106,8 +106,8 @@ public:
 
 	void changeUnit(int);
 	void changeAnalysisType(int);
-    void changeDamping(const QString&);
-    void changePeriod(const QString&);
+	void changeDamping(const QString&);
+	void changePeriod(const QString&);
 	void changeScale(const QString&);
 	void changeAccxRecord(const QString&);
 	void changeAccyRecord(const QString&);
@@ -125,8 +125,8 @@ public:
 
 	int unit_system = 1;
 	int analysis_type = 1;
-    double damping_ratio = 5.;
-    double natural_period = 1.;
+	double damping_ratio = 5.;
+	double natural_period = 1.;
 	double scale_factor = 1.;
 
 	QVector<QString> acc_record = QVector<QString>(2, "");

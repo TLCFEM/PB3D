@@ -20,6 +20,7 @@
 
 #include <Database.h>
 #include <QMainWindow>
+#include <QProcess>
 
 QT_BEGIN_NAMESPACE
 
@@ -81,7 +82,7 @@ private slots:
 	void on_input_absx_textChanged(const QString&);
 	void on_input_damping_textChanged(const QString&);
 	void on_input_frame_section_tag_textChanged(const QString&) const;
-    void on_input_period_textChanged(const QString&);
+	void on_input_period_textChanged(const QString&);
 	void on_input_qfx_textChanged(const QString&);
 	void on_input_qfy_textChanged(const QString&);
 	void on_input_qfz_textChanged(const QString&);
@@ -97,7 +98,7 @@ private slots:
 	void on_check_accx_clicked(bool);
 	void on_check_accy_clicked(bool);
 	void on_button_select_clicked();
-    void on_button_run_clicked();
+	void on_button_run_clicked();
 
 private:
 	Ui::ModelBuilder* ui;
@@ -113,5 +114,8 @@ private:
 	void updateElementList() const;
 
 	void updateAnalysisSetting() const;
+
+	QString saved_file_name;
+	QProcess process;
 };
 #endif // MODELBUILDER_H

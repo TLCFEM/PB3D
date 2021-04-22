@@ -1,6 +1,6 @@
 #include <windows.h>
 
-IDI_ICON1	ICON	DISCARDABLE	"C:\\Users\\tlcfe\\Documents\\Git\\FMC\\res\\UC.ico"
+IDI_ICON1	ICON	DISCARDABLE	"C:\\Users\\tlcfe\\Documents\\Git\\PB3D\\res\\UC.ico"
 
 VS_VERSION_INFO VERSIONINFO
 	FILEVERSION 0,0,0,0
@@ -23,8 +23,8 @@ VS_VERSION_INFO VERSIONINFO
 				VALUE "FileDescription", "\0"
 				VALUE "FileVersion", "0.0.0.0\0"
 				VALUE "LegalCopyright", "\0"
-				VALUE "OriginalFilename", "FMC.exe\0"
-				VALUE "ProductName", "FMC\0"
+				VALUE "OriginalFilename", "PB3D.exe\0"
+				VALUE "ProductName", "PB3D\0"
 				VALUE "ProductVersion", "0.0.0.0\0"
 			END
 		END

@@ -132,7 +132,7 @@ void ModelBuilder::writeOutput() {
 	dialog.setAcceptMode(QFileDialog::AcceptSave);
 	if(dialog.exec()) {
 		const auto filename = dialog.selectedFiles();
-		if(1 == filename.size()) model.saveModel(filename.at(0));
+		if(1 == filename.size() && model.saveModel(filename.at(0))) saved_file_name = filename.at(0);
 	}
 }
 
@@ -254,8 +254,8 @@ void ModelBuilder::updateElementList() const {
 
 void ModelBuilder::updateAnalysisSetting() const {
 	ui->box_unit->setCurrentIndex(model.unit_system - 1);
-    ui->input_damping->setText(QString::number(model.damping_ratio));
-    ui->input_period->setText(QString::number(model.natural_period));
+	ui->input_damping->setText(QString::number(model.damping_ratio));
+	ui->input_period->setText(QString::number(model.natural_period));
 	ui->input_scale->setText(QString::number(model.scale_factor));
 	ui->input_qfx->setText(QString::number(model.quadrature_frame.at(0)));
 	ui->input_qfy->setText(QString::number(model.quadrature_frame.at(1)));
@@ -869,13 +869,24 @@ void ModelBuilder::on_button_select_clicked() {
 }
 
 void ModelBuilder::on_button_run_clicked() {
-	const auto path = ui->label_exe->text();
+	auto path = ui->label_exe->text();
 	if(path.isEmpty() || (!path.endsWith(".exe") && !path.endsWith(".EXE"))) {
 		QMessageBox msg(QMessageBox::Critical, tr("Error"), tr("Please selectc the correct executable first."), QMessageBox::Ok, this);
 		msg.exec();
 	}
-    else {
-        QProcess process;
-        process.start(path, QStringList() << ui->label_exe->text());
-    }
+	else {
+		if(saved_file_name.isEmpty()) {
+			QMessageBox msg(QMessageBox::Critical, tr("Error"), tr("Please save the model first."), QMessageBox::Ok, this);
+			msg.exec();
+		}
+		else {
+			path.prepend("cmd.exe /C ");
+			path.append(' ');
+			path.append(saved_file_name);
+			QDir pwd(saved_file_name);
+			pwd.cdUp();
+			process.setWorkingDirectory(pwd.absolutePath());
+			process.startDetached(path.toStdString().c_str());
+		}
+	}
 }

@@ -27,8 +27,8 @@ bool PB3D_DARK = false;
 
 int main(int argc, char* argv[]) {
 	QApplication app(argc, argv);
-    QApplication::setApplicationName("PB3D");
-    QApplication::setApplicationDisplayName("PB3D");
+	QApplication::setApplicationName("PB3D");
+	QApplication::setApplicationDisplayName("PB3D");
 	QApplication::setOrganizationName("University of Canterbury");
 	QApplication::setWindowIcon(QIcon(":/../res/UC.ico"));
 
@@ -68,12 +68,12 @@ int main(int argc, char* argv[]) {
 
 		qApp->setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }");
 
-        PB3D_DARK = true;
+		PB3D_DARK = true;
 	}
 #endif
 
 	ModelBuilder win;
-    win.setWindowTitle("PB3D");
+	win.setWindowTitle("PB3D");
 
 	QSurfaceFormat format;
 	format.setDepthBufferSize(24);
