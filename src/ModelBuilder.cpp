@@ -134,6 +134,8 @@ void ModelBuilder::writeOutput() {
 		const auto filename = dialog.selectedFiles();
 		if(1 == filename.size() && model.saveModel(filename.at(0))) saved_file_name = filename.at(0);
 	}
+
+    ui->canvas->repaint();
 }
 
 void ModelBuilder::saveScreenshot() {

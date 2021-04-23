@@ -476,8 +476,18 @@ void Database::serializeBC(QTextStream& output) {
 }
 
 void Database::compress() {
-	const auto node_tag = getNodeTag();
+    auto node_tag = getNodeTag();
 	for(auto I = 0, J = 1; I < node_tag.size(); ++I, ++J) compress_node(node_tag.at(I), J);
+
+    node_tag = getNodeTag();
+    std::vector<bool> label(node_tag.size() + 1, false);
+
+    for(auto& [fst, snd] : element_pool) {
+        if(!label.at(snd.encoding.at(0))) label.at(snd.encoding.at(0)) = true;
+        if(!label.at(snd.encoding.at(1))) label.at(snd.encoding.at(1)) = true;
+    }
+
+    for(size_t I = 1; I < label.size(); ++I) if(!label.at(I)) node_pool.erase(I);
 
 	const auto wall_section_tag = getWallSectionTag();
 	for(auto I = 0, J = 1; I < wall_section_tag.size(); ++I, ++J) compress_wall_section(wall_section_tag.at(I), J);

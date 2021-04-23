@@ -120,8 +120,8 @@ public:
 	void serializeMass(QTextStream&);
 	void serializeBC(QTextStream&);
 
-	QVector<int> quadrature_frame = QVector<int>(3, 6);
-	QVector<int> quadrature_wall = QVector<int>(2, 6);
+    QVector<int> quadrature_frame = QVector<int>(3, 5);
+    QVector<int> quadrature_wall = QVector<int>(2, 5);
 
 	int unit_system = 1;
 	int analysis_type = 1;
