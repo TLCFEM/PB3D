@@ -201,6 +201,8 @@ void ModelBuilder::showAbout() {
 }
 
 void ModelBuilder::openFile() {
+    on_reset_model_clicked();
+
 	QFileDialog dialog(this);
 	dialog.setFileMode(QFileDialog::AnyFile);
 	if(dialog.exec()) {
@@ -316,7 +318,10 @@ void ModelBuilder::on_input_damping_textChanged(const QString& F) { model.change
 
 void ModelBuilder::on_input_period_textChanged(const QString& F) { model.changePeriod(F); }
 
-void ModelBuilder::on_input_qfx_textChanged(const QString& qfx) { model.quadrature_frame[0] = qfx.toInt(); }
+void ModelBuilder::on_input_qfx_textChanged(const QString& qfx) {
+    if(qfx.toInt() > 5) ui->input_qfx->setText("5");
+    model.quadrature_frame[0] = std::min(5, qfx.toInt());
+}
 
 void ModelBuilder::on_input_qfy_textChanged(const QString& qfy) { model.quadrature_frame[1] = qfy.toInt(); }
 
@@ -843,8 +848,12 @@ void ModelBuilder::on_check_accx_clicked(const bool checked) {
 	QFileDialog dialog(this);
 	dialog.setFileMode(QFileDialog::ExistingFile);
 	if(dialog.exec()) {
-		const auto filename = dialog.selectedFiles();
-		if(1 == filename.size()) ui->input_accx->setText(filename.at(0).split("/").last());
+        const auto filename = dialog.selectedFiles();
+        if(1 == filename.size()) {
+            const auto name = filename.at(0).split("/").last();
+            ui->input_accx->setText(name);
+            model.changeAccxRecord(name);
+        }
 	}
 }
 
@@ -854,8 +863,12 @@ void ModelBuilder::on_check_accy_clicked(const bool checked) {
 	QFileDialog dialog(this);
 	dialog.setFileMode(QFileDialog::ExistingFile);
 	if(dialog.exec()) {
-		const auto filename = dialog.selectedFiles();
-		if(1 == filename.size()) ui->input_accy->setText(filename.at(0).split("/").last());
+        const auto filename = dialog.selectedFiles();
+        if(1 == filename.size()) {
+            const auto name = filename.at(0).split("/").last();
+            ui->input_accy->setText(name);
+            model.changeAccyRecord(name);
+        }
 	}
 }
 
@@ -878,8 +891,8 @@ void ModelBuilder::on_button_run_clicked() {
 		if(saved_file_name.isEmpty()) {
             QMessageBox msg(QMessageBox::Information, tr("Note"), tr("Please save the model first."), QMessageBox::Ok, this);
             msg.exec();
+            writeOutput();
         }
-        writeOutput();
         if(saved_file_name.isEmpty()) {
             QMessageBox msg(QMessageBox::Critical, tr("Error"), tr("Fail to load the file."), QMessageBox::Ok, this);
             msg.exec();
