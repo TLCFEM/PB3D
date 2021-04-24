@@ -98,7 +98,7 @@ private slots:
 	void on_check_accx_clicked(bool);
 	void on_check_accy_clicked(bool);
 	void on_button_select_clicked();
-	void on_button_run_clicked();
+    void on_button_run_clicked();
 
 private:
 	Ui::ModelBuilder* ui;
@@ -116,5 +116,6 @@ private:
 	void updateAnalysisSetting() const;
 
     QString saved_file_name;
+    bool saved = false;
 };
 #endif // MODELBUILDER_H

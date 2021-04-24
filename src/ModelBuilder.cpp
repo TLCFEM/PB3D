@@ -131,8 +131,12 @@ void ModelBuilder::writeOutput() {
 	dialog.setFileMode(QFileDialog::AnyFile);
 	dialog.setAcceptMode(QFileDialog::AcceptSave);
 	if(dialog.exec()) {
-		const auto filename = dialog.selectedFiles();
-		if(1 == filename.size() && model.saveModel(filename.at(0))) saved_file_name = filename.at(0);
+        const auto filename = dialog.selectedFiles();
+        if(1 == filename.size() && model.saveModel(filename.at(0))) {
+            saved_file_name = filename.at(0);
+
+            saved = true;
+        }
 	}
 
     ui->canvas->repaint();
@@ -209,11 +213,11 @@ void ModelBuilder::openFile() {
 	dialog.setFileMode(QFileDialog::AnyFile);
 	if(dialog.exec()) {
 		const auto filename = dialog.selectedFiles();
-		if(1 == filename.size() && ! model.loadModel(filename.at(0))) {
+        if(1 == filename.size() && !model.loadModel(filename.at(0))) {
 			QMessageBox msg(this);
 			msg.setText(tr("Fail to read file %1.\n").arg(filename.at(0)) + "Please make sure the input file is correct.\nOtherwise contact the authors.\n");
-			msg.exec();
-		}
+            msg.exec();
+        } else saved_file_name = filename.at(0);
 	}
 
 	ui->input_node_tag->setText(QString::number(model.getNextNodeTag()));
@@ -226,6 +230,8 @@ void ModelBuilder::openFile() {
 	updateAnalysisSetting();
 
 	ui->canvas->repaint();
+
+    saved = true;
 }
 
 void ModelBuilder::updateNodeList() const {
@@ -258,6 +264,13 @@ void ModelBuilder::updateElementList() const {
 
 void ModelBuilder::updateAnalysisSetting() const {
 	ui->box_unit->setCurrentIndex(model.unit_system - 1);
+
+    if(1 != ui->box_unit->currentIndex()) {
+        ui->slider_bc_size->setValue(5000);
+        ui->slider_axis_size->setValue(100000);
+        ui->slider_grid_size->setValue(17);
+    }
+
 	ui->input_damping->setText(QString::number(model.damping_ratio));
 	ui->input_period->setText(QString::number(model.natural_period));
 	ui->input_scale->setText(QString::number(model.scale_factor));
@@ -312,26 +325,60 @@ void ModelBuilder::updateFrameSectionList() {
 	ui->canvas->repaint();
 }
 
-void ModelBuilder::on_box_unit_currentIndexChanged(int index) { model.changeUnit(index + 1); }
+void ModelBuilder::on_box_unit_currentIndexChanged(int index) {
+    model.changeUnit(index + 1);
 
-void ModelBuilder::on_input_scale_textChanged(const QString& F) { model.changeScale(F); }
+    saved = false;
+}
 
-void ModelBuilder::on_input_damping_textChanged(const QString& F) { model.changeDamping(F); }
+void ModelBuilder::on_input_scale_textChanged(const QString& F) {
+    model.changeScale(F);
 
-void ModelBuilder::on_input_period_textChanged(const QString& F) { model.changePeriod(F); }
+    saved = false;
+}
+
+void ModelBuilder::on_input_damping_textChanged(const QString& F) {
+    model.changeDamping(F);
+
+    saved = false;
+}
+
+void ModelBuilder::on_input_period_textChanged(const QString& F) {
+    model.changePeriod(F);
+
+    saved = false;
+}
 
 void ModelBuilder::on_input_qfx_textChanged(const QString& qfx) {
     if(qfx.toInt() > 5) ui->input_qfx->setText("5");
     model.quadrature_frame[0] = std::min(5, qfx.toInt());
+
+    saved = false;
 }
 
-void ModelBuilder::on_input_qfy_textChanged(const QString& qfy) { model.quadrature_frame[1] = qfy.toInt(); }
+void ModelBuilder::on_input_qfy_textChanged(const QString& qfy) {
+    model.quadrature_frame[1] = qfy.toInt();
 
-void ModelBuilder::on_input_qfz_textChanged(const QString& qfz) { model.quadrature_frame[2] = qfz.toInt(); }
+    saved = false;
+}
 
-void ModelBuilder::on_input_qwx_textChanged(const QString& qwx) { model.quadrature_wall[0] = qwx.toInt(); }
+void ModelBuilder::on_input_qfz_textChanged(const QString& qfz) {
+    model.quadrature_frame[2] = qfz.toInt();
 
-void ModelBuilder::on_input_qwy_textChanged(const QString& qwy) { model.quadrature_wall[1] = qwy.toInt(); }
+    saved = false;
+}
+
+void ModelBuilder::on_input_qwx_textChanged(const QString& qwx) {
+    model.quadrature_wall[0] = qwx.toInt();
+
+    saved = false;
+}
+
+void ModelBuilder::on_input_qwy_textChanged(const QString& qwy) {
+    model.quadrature_wall[1] = qwy.toInt();
+
+    saved = false;
+}
 
 void ModelBuilder::on_box_modify_type_currentIndexChanged(const int type) const {
 	ui->box_node->setCurrentIndex(0);
@@ -366,9 +413,9 @@ void ModelBuilder::on_box_modify_type_currentIndexChanged(const int type) const 
 			ui->box_node->setDisabled(true);
 		}
 		else if(2 == type) {
-			ui->label_modify_node_a->setText("X");
-			ui->label_modify_node_b->setText("Y");
-			ui->label_modify_node_c->setText("Z");
+            ui->label_modify_node_a->setText("A");
+            ui->label_modify_node_b->setText("B");
+            ui->label_modify_node_c->setText("C");
 			ui->label_valid_node->setDisabled(true);
 			ui->box_node->setDisabled(true);
 		}
@@ -395,6 +442,8 @@ void ModelBuilder::on_button_split_element_clicked() {
 
 	ui->input_element_tag->setText(QString::number(model.getNextElementTag()));
 	updateElementList();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_remove_wall_section_clicked() {
@@ -403,6 +452,8 @@ void ModelBuilder::on_button_remove_wall_section_clicked() {
 	model.removeWallSection(tag);
 
 	updateWallSectionList();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_remove_frame_section_clicked() {
@@ -411,6 +462,8 @@ void ModelBuilder::on_button_remove_frame_section_clicked() {
 	model.removeFrameSection(tag);
 
 	updateFrameSectionList();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_remove_element_clicked() {
@@ -419,6 +472,8 @@ void ModelBuilder::on_button_remove_element_clicked() {
 	model.removeElement(tag);
 
 	updateElementList();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_remove_all_element_clicked() {
@@ -426,6 +481,8 @@ void ModelBuilder::on_button_remove_all_element_clicked() {
 
 	ui->input_element_tag->setText("1");
 	updateElementList();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_modify_node_clicked() {
@@ -446,6 +503,8 @@ void ModelBuilder::on_button_modify_node_clicked() {
 	ui->input_modify_node_c->setText("");
 
 	updateNodeList();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_add_node_clicked() {
@@ -467,6 +526,8 @@ void ModelBuilder::on_button_add_node_clicked() {
 	ui->input_node_tag->setText(QString::number(model.getNextNodeTag()));
 
 	updateNodeList();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_change_section_clicked() {
@@ -476,6 +537,8 @@ void ModelBuilder::on_button_change_section_clicked() {
 	model.changeSection(tag, sec_tag);
 
 	ui->canvas->repaint();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_clear_bc_clicked() {
@@ -484,6 +547,8 @@ void ModelBuilder::on_button_clear_bc_clicked() {
 	ui->box_node_load->setCurrentIndex(0);
 
 	ui->canvas->repaint();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_clear_load_clicked() {
@@ -496,6 +561,8 @@ void ModelBuilder::on_button_clear_load_clicked() {
 	ui->box_node_load->setCurrentIndex(0);
 
 	ui->canvas->repaint();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_add_bc_clicked() {
@@ -519,6 +586,8 @@ void ModelBuilder::on_button_add_bc_clicked() {
 	ui->box_node_load->setCurrentIndex(0);
 
 	ui->canvas->repaint();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_add_load_clicked() {
@@ -545,6 +614,8 @@ void ModelBuilder::on_button_add_load_clicked() {
 	ui->box_node_load->setCurrentIndex(0);
 
 	ui->canvas->repaint();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_add_element_clicked() {
@@ -581,6 +652,8 @@ void ModelBuilder::on_button_add_element_clicked() {
 
 	ui->box_node_i->setCurrentIndex(0);
 	ui->box_node_j->setCurrentIndex(0);
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_add_wall_section_clicked() {
@@ -614,6 +687,8 @@ void ModelBuilder::on_button_add_wall_section_clicked() {
 	ui->input_wall_section_tag->setText(QString::number(model.getNextWallSectionTag()));
 
 	updateWallSectionList();
+
+    saved = false;
 }
 
 void ModelBuilder::on_button_add_frame_section_clicked() {
@@ -632,6 +707,8 @@ void ModelBuilder::on_button_add_frame_section_clicked() {
 	ui->input_frame_section_tag->setText(QString::number(model.getNextFrameSectionTag()));
 
 	updateFrameSectionList();
+
+    saved = false;
 }
 
 void ModelBuilder::on_reset_model_clicked() {
@@ -648,6 +725,8 @@ void ModelBuilder::on_reset_model_clicked() {
 	ui->input_element_tag->setText("1");
 	ui->label_section_info->clear();
 	ui->label_section_info_2->clear();
+
+    saved = false;
 }
 
 void ModelBuilder::on_box_element_type_currentTextChanged(const QString& F) {
@@ -712,17 +791,41 @@ void ModelBuilder::on_box_load_type_currentTextChanged(const QString& F) const {
 	}
 }
 
-void ModelBuilder::on_input_relf_textChanged(const QString& t) { model.tolerance[0] = t.toDouble(); }
+void ModelBuilder::on_input_relf_textChanged(const QString& t) {
+    model.tolerance[0] = t.toDouble();
 
-void ModelBuilder::on_input_relx_textChanged(const QString& t) { model.tolerance[1] = t.toDouble(); }
+    saved = false;
+}
 
-void ModelBuilder::on_input_relu_textChanged(const QString& t) { model.tolerance[2] = t.toDouble(); }
+void ModelBuilder::on_input_relx_textChanged(const QString& t) {
+    model.tolerance[1] = t.toDouble();
 
-void ModelBuilder::on_input_absf_textChanged(const QString& t) { model.tolerance[3] = t.toDouble(); }
+    saved = false;
+}
 
-void ModelBuilder::on_input_absx_textChanged(const QString& t) { model.tolerance[4] = t.toDouble(); }
+void ModelBuilder::on_input_relu_textChanged(const QString& t) {
+    model.tolerance[2] = t.toDouble();
 
-void ModelBuilder::on_input_absu_textChanged(const QString& t) { model.tolerance[5] = t.toDouble(); }
+    saved = false;
+}
+
+void ModelBuilder::on_input_absf_textChanged(const QString& t) {
+    model.tolerance[3] = t.toDouble();
+
+    saved = false;
+}
+
+void ModelBuilder::on_input_absx_textChanged(const QString& t) {
+    model.tolerance[4] = t.toDouble();
+
+    saved = false;
+}
+
+void ModelBuilder::on_input_absu_textChanged(const QString& t) {
+    model.tolerance[5] = t.toDouble();
+
+    saved = false;
+}
 
 void ModelBuilder::on_box_section_textHighlighted(const QString& F) {
 	ui->label_section_info->clear();
@@ -855,6 +958,8 @@ void ModelBuilder::on_check_accx_clicked(const bool checked) {
             const auto name = filename.at(0).split("/").last();
             ui->input_accx->setText(name);
             model.changeAccxRecord(name);
+
+            saved = false;
         }
 	}
 }
@@ -870,6 +975,8 @@ void ModelBuilder::on_check_accy_clicked(const bool checked) {
             const auto name = filename.at(0).split("/").last();
             ui->input_accy->setText(name);
             model.changeAccyRecord(name);
+
+            saved = false;
         }
 	}
 }
@@ -899,7 +1006,7 @@ void ModelBuilder::on_button_run_clicked() {
             QMessageBox msg(QMessageBox::Critical, tr("Error"), tr("Fail to load the file."), QMessageBox::Ok, this);
             msg.exec();
         }
-        else {
+        else if(saved) {
             QDir pwd(saved_file_name);
             pwd.cdUp();
             path.prepend(" && ");

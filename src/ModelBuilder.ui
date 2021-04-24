@@ -2820,7 +2820,7 @@
                  </size>
                 </property>
                 <property name="text">
-                 <string>I</string>
+                 <string>Repear I</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -2842,7 +2842,7 @@
                  </size>
                 </property>
                 <property name="text">
-                 <string>J</string>
+                 <string>Repeat J</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -2864,7 +2864,7 @@
                  </size>
                 </property>
                 <property name="text">
-                 <string>K</string>
+                 <string>Repeat K</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
