@@ -2,8 +2,8 @@ build*
 src/.vs
 src/debug
 src/release
-src/FMC.v*
-src/FMC.pro.user
-src/FMC_*
+src/PB3D.v*
+src/PB3D.pro.user
+src/PB3D_*
 src/.qmake.stash
 src/ui_*

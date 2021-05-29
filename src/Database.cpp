@@ -487,7 +487,7 @@ void Database::compress() {
         if(!label.at(snd.encoding.at(1))) label.at(snd.encoding.at(1)) = true;
     }
 
-    for(size_t I = 1; I < label.size(); ++I) if(!label.at(I)) node_pool.erase(I);
+    for(auto I = 1; I < label.size(); ++I) if(!label.at(I)) node_pool.erase(I);
 
 	const auto wall_section_tag = getWallSectionTag();
 	for(auto I = 0, J = 1; I < wall_section_tag.size(); ++I, ++J) compress_wall_section(wall_section_tag.at(I), J);
