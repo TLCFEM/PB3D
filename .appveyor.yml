@@ -20,6 +20,7 @@ after_build:
   - windeployqt release/PB3D.exe
   - cmd: cp LICENSE release/LICENSE.txt
   - cmd: cp README.md release/README.md
+  - cmd: cp core/PB3D.CORE.exe release/PB3D.CORE.exe
   - rm release/*.obj
   - rm release/*.cpp
   - rm release/*.h

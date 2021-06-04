@@ -7,3 +7,6 @@ src/PB3D.pro.user
 src/PB3D_*
 src/.qmake.stash
 src/ui_*
+core/x64
+core/.vs
+*.u2d
