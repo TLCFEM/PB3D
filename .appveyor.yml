@@ -23,14 +23,14 @@ after_build:
   - cmd: copy core\PB3D.CORE.exe release\PB3D.CORE.exe
   - cmd: mkdir release\example
   - cmd: copy example release\example
-  - rm release\*.obj
-  - rm release\*.cpp
-  - rm release\*.h
-  - rm release\*.res
+  - rm release/*.obj
+  - rm release/*.cpp
+  - rm release/*.h
+  - rm release/*.res
   - cd release
   - 7z a PB3D.zip *
 artifacts:
-  - path: release\PB3D.zip
+  - path: release/PB3D.zip
     name: PB3D
 deploy:
   - provider: GitHub
