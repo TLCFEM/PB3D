@@ -22,7 +22,7 @@ after_build:
   - cmd: cp README.md release\README.md
   - cmd: cp core\PB3D.CORE.exe release\PB3D.CORE.exe
   - cmd: mkdir release\example
-  - cmd: cp example\* release\example
+  - cmd: cp example\*.* release\example
   - rm release\*.obj
   - rm release\*.cpp
   - rm release\*.h
