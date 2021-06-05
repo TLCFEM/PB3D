@@ -559,7 +559,7 @@ C
 C
 C        * Plotting the input model 
 C
-         CALL DRAWMODEL (NMEMF,NWALL,NMASS)
+         !CALL DRAWMODEL (NMEMF,NWALL,NMASS)
 
 
 !
