@@ -992,6 +992,17 @@ void ModelBuilder::on_button_select_clicked() {
 
 void ModelBuilder::on_button_run_clicked() {
 	auto path = ui->label_exe->text();
+
+    if(path.isEmpty()) {
+        path = QDir::currentPath() + "/PB3D.CORE.exe";
+        QFile exe_file(path);
+        if(!exe_file.exists()) path.clear();
+        else {
+            ui->label_exe->setText(path);
+            ui->label_exe->update();
+        }
+    }
+
 	if(path.isEmpty() || (!path.endsWith(".exe") && !path.endsWith(".EXE"))) {
 		QMessageBox msg(QMessageBox::Critical, tr("Error"), tr("Please selectc the correct executable first."), QMessageBox::Ok, this);
 		msg.exec();
