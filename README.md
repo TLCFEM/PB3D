@@ -39,7 +39,7 @@ The following operations are implemented to modify nodes.
 
 #### Remove Nodes On Given Plane/Line
 
-1. Assign parameters $$a$$, $$b$$ and $$c$$ values. All nodes which satisfy $$ax+by+cz=0$$ will be highlighted.
+1. Assign parameters $$a$$, $$b$$ and $$c$$ values. All nodes which satisfy $$x=a$$, $$y=b$$ and $$z=c$$ will be highlighted. Leave any empty if not wanted.
 2. Click `Apply`.
 
 #### Change Coordinates
@@ -72,7 +72,9 @@ A similar logic is used to define boundary conditions and loads/masses.
 
 ### Run Analysis
 
-To perform the analysis, select the executable via `Select EXE`, save the model and click `Run`.
+To perform the analysis, select the executable via `Select EXE`, save the model and click `Run`. If the main executable `PB3D.CORE.exe` is placed under the folder that contains `PB3D.exe` GUI application, there is no need to explicitly `Select EXE`, one can directly click `Run`.
+
+Whenever the model is changed, please remember to save the model to the new file.
 
 ### Rendering Settings
 
