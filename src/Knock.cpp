@@ -35,7 +35,7 @@ int main(int argc, char* argv[]) {
 	auto font = QApplication::font();
 	const auto rec = QGuiApplication::primaryScreen()->availableGeometry();
     if(std::max(rec.height(), rec.width()) > 2000) font.setPointSize(10);
-	else font.setPointSize(9);
+    else font.setPointSize(9);
 	QApplication::setFont(font);
 
 	qApp->setStyle(QStyleFactory::create("fusion"));
