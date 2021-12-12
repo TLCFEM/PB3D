@@ -36,6 +36,7 @@ LIBS += -lopengl32
 
 unix{
 LIBS += -lGL -lglut
+QMAKE_CXXFLAGS += -Wno-deprecated-copy
 }
 
 # Default rules for deployment.

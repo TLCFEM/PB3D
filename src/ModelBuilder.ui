@@ -7,20 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>1200</width>
-    <height>900</height>
+    <height>700</height>
    </rect>
   </property>
   <property name="sizePolicy">
    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
     <horstretch>0</horstretch>
-    <verstretch>1</verstretch>
+    <verstretch>0</verstretch>
    </sizepolicy>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>1200</width>
-    <height>850</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>ModelBuilder</string>
@@ -34,15 +28,21 @@
       </property>
       <widget class="QTabWidget" name="tab_main">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
-         <horstretch>1</horstretch>
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
        <property name="minimumSize">
         <size>
-         <width>550</width>
-         <height>800</height>
+         <width>500</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>700</width>
+         <height>16777215</height>
         </size>
        </property>
        <property name="currentIndex">
@@ -64,64 +64,18 @@
               <item row="0" column="0">
                <widget class="QPushButton" name="button_add_node">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Add</string>
                 </property>
                </widget>
               </item>
-              <item row="0" column="1">
-               <widget class="QLineEdit" name="input_node_tag">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Node tag&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </widget>
-              </item>
               <item row="0" column="2">
                <widget class="QLabel" name="label_incre">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Incre</string>
                 </property>
@@ -132,18 +86,6 @@
               </item>
               <item row="0" column="3">
                <widget class="QLabel" name="label_repeat_node">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Repeat</string>
                 </property>
@@ -154,18 +96,6 @@
               </item>
               <item row="1" column="0">
                <widget class="QLabel" name="label_x">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>X</string>
                 </property>
@@ -176,75 +106,19 @@
               </item>
               <item row="1" column="1">
                <widget class="QLineEdit" name="input_x">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
                 </property>
                 <property name="text">
                  <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="QLineEdit" name="input_dx">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="3">
-               <widget class="QLineEdit" name="input_nx">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
                 </property>
                </widget>
               </item>
               <item row="2" column="0">
                <widget class="QLabel" name="label_y">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Y</string>
                 </property>
@@ -255,75 +129,19 @@
               </item>
               <item row="2" column="1">
                <widget class="QLineEdit" name="input_y">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
                 </property>
                 <property name="text">
                  <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="2">
-               <widget class="QLineEdit" name="input_dy">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="3">
-               <widget class="QLineEdit" name="input_ny">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
                 </property>
                </widget>
               </item>
               <item row="3" column="0">
                <widget class="QLabel" name="label_z">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Z</string>
                 </property>
@@ -334,17 +152,58 @@
               </item>
               <item row="3" column="1">
                <widget class="QLineEdit" name="input_z">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
                 </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QSpinBox" name="input_nx">
+                <property name="value">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QSpinBox" name="input_ny">
+                <property name="value">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="3">
+               <widget class="QSpinBox" name="input_nz">
+                <property name="value">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLineEdit" name="input_dx">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QLineEdit" name="input_dy">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
                 </property>
                 <property name="text">
                  <string>0</string>
@@ -353,52 +212,33 @@
               </item>
               <item row="3" column="2">
                <widget class="QLineEdit" name="input_dz">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
                 </property>
                 <property name="text">
                  <string>0</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="3">
-               <widget class="QLineEdit" name="input_nz">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
+              <item row="0" column="1">
+               <widget class="QSpinBox" name="input_node_tag">
+                <property name="minimum">
+                 <number>1</number>
                 </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
+                <property name="maximum">
+                 <number>10000</number>
                 </property>
-                <property name="text">
-                 <string>1</string>
+                <property name="value">
+                 <number>1</number>
                 </property>
                </widget>
               </item>
              </layout>
             </item>
            </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
           </widget>
          </item>
          <item>
@@ -412,22 +252,10 @@
               <item row="1" column="0">
                <widget class="QLabel" name="label_valid_node">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Tag</string>
@@ -438,37 +266,12 @@
                </widget>
               </item>
               <item row="1" column="1">
-               <widget class="QComboBox" name="box_node">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-               </widget>
+               <widget class="QComboBox" name="box_node"/>
               </item>
               <item row="1" column="2">
                <widget class="QLabel" name="label_modify_node_a">
                 <property name="enabled">
                  <bool>false</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>45</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string/>
@@ -483,36 +286,12 @@
                 <property name="enabled">
                  <bool>false</bool>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                </widget>
               </item>
               <item row="1" column="4">
                <widget class="QLabel" name="label_modify_node_b">
                 <property name="enabled">
                  <bool>false</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>45</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string/>
@@ -527,36 +306,12 @@
                 <property name="enabled">
                  <bool>false</bool>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                </widget>
               </item>
               <item row="1" column="6">
                <widget class="QLabel" name="label_modify_node_c">
                 <property name="enabled">
                  <bool>false</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>45</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string/>
@@ -571,39 +326,15 @@
                 <property name="enabled">
                  <bool>false</bool>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                </widget>
               </item>
               <item row="0" column="6" colspan="2" alignment="Qt::AlignHCenter">
                <widget class="QPushButton" name="button_modify_node">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Apply</string>
@@ -612,18 +343,6 @@
               </item>
               <item row="0" column="1" colspan="5">
                <widget class="QComboBox" name="box_modify_type">
-                <property name="minimumSize">
-                 <size>
-                  <width>180</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <item>
                  <property name="text">
                   <string>Remove a single node</string>
@@ -682,22 +401,10 @@
               <item row="0" column="0">
                <widget class="QPushButton" name="button_add_frame_section">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Add</string>
@@ -707,22 +414,10 @@
               <item row="0" column="1">
                <widget class="QComboBox" name="box_material_type">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <item>
                  <property name="text">
@@ -738,18 +433,6 @@
               </item>
               <item row="0" column="2">
                <widget class="QLabel" name="label_8">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Tag</string>
                 </property>
@@ -758,39 +441,8 @@
                 </property>
                </widget>
               </item>
-              <item row="0" column="3">
-               <widget class="QLineEdit" name="input_frame_section_tag">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </widget>
-              </item>
               <item row="1" column="0">
                <widget class="QLabel" name="label_4">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Elastic Modulus</string>
                 </property>
@@ -801,18 +453,6 @@
               </item>
               <item row="1" column="1">
                <widget class="QLineEdit" name="input_e">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -822,18 +462,6 @@
                <widget class="QLabel" name="label_w">
                 <property name="enabled">
                  <bool>true</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Width</string>
@@ -848,18 +476,6 @@
                 <property name="enabled">
                  <bool>true</bool>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -869,18 +485,6 @@
                <widget class="QLabel" name="label_g">
                 <property name="enabled">
                  <bool>true</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Shear Modulus</string>
@@ -895,18 +499,6 @@
                 <property name="enabled">
                  <bool>true</bool>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -916,18 +508,6 @@
                <widget class="QLabel" name="label_h">
                 <property name="enabled">
                  <bool>true</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Height</string>
@@ -942,33 +522,27 @@
                 <property name="enabled">
                  <bool>true</bool>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QSpinBox" name="input_frame_section_tag">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>100000</number>
+                </property>
+                <property name="value">
+                 <number>1</number>
                 </property>
                </widget>
               </item>
              </layout>
             </item>
            </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line_8">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
           </widget>
          </item>
          <item>
@@ -979,25 +553,6 @@
            <layout class="QVBoxLayout" name="verticalLayout_11">
             <item>
              <layout class="QGridLayout" name="gridLayout_6">
-              <item row="0" column="3">
-               <widget class="QLineEdit" name="input_wall_section_tag">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </widget>
-              </item>
               <item row="2" column="2">
                <widget class="QLabel" name="label_local_axisy">
                 <property name="sizePolicy">
@@ -1005,18 +560,6 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Thickness</string>
@@ -1028,18 +571,6 @@
               </item>
               <item row="0" column="2">
                <widget class="QLabel" name="label_9">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Tag</string>
                 </property>
@@ -1050,18 +581,6 @@
               </item>
               <item row="2" column="1">
                <widget class="QLineEdit" name="input_ds">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1069,18 +588,6 @@
               </item>
               <item row="3" column="1">
                <widget class="QLineEdit" name="input_es">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1088,18 +595,6 @@
               </item>
               <item row="3" column="2">
                <widget class="QLabel" name="label_local_axisz">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Drift Limit</string>
                 </property>
@@ -1110,18 +605,6 @@
               </item>
               <item row="3" column="0">
                <widget class="QLabel" name="label_e">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>E</string>
                 </property>
@@ -1130,47 +613,10 @@
                 </property>
                </widget>
               </item>
-              <item row="0" column="0">
-               <widget class="QPushButton" name="button_add_wall_section">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Add</string>
-                </property>
-               </widget>
-              </item>
               <item row="1" column="1">
                <widget class="QLineEdit" name="input_ls">
                 <property name="enabled">
                  <bool>true</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string/>
@@ -1179,18 +625,6 @@
               </item>
               <item row="3" column="3">
                <widget class="QLineEdit" name="input_dl">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1198,18 +632,6 @@
               </item>
               <item row="1" column="3">
                <widget class="QLineEdit" name="input_ys">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1217,18 +639,6 @@
               </item>
               <item row="2" column="0">
                <widget class="QLabel" name="label_d">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>D</string>
                 </property>
@@ -1242,18 +652,6 @@
                 <property name="enabled">
                  <bool>true</bool>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>L</string>
                 </property>
@@ -1264,18 +662,6 @@
               </item>
               <item row="1" column="2">
                <widget class="QLabel" name="label_local_axisx">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Yield Strength</string>
                 </property>
@@ -1286,20 +672,31 @@
               </item>
               <item row="2" column="3">
                <widget class="QLineEdit" name="input_th">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="button_add_wall_section">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Add</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QSpinBox" name="input_wall_section_tag">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>100000</number>
                 </property>
                </widget>
               </item>
@@ -1309,18 +706,6 @@
              <layout class="QGridLayout" name="gridLayout_15">
               <item row="0" column="1">
                <widget class="QLabel" name="label_3">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Q0</string>
                 </property>
@@ -1331,18 +716,6 @@
               </item>
               <item row="0" column="2">
                <widget class="QLabel" name="label">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Q1</string>
                 </property>
@@ -1353,18 +726,6 @@
               </item>
               <item row="0" column="3">
                <widget class="QLabel" name="label_5">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Q2</string>
                 </property>
@@ -1375,18 +736,6 @@
               </item>
               <item row="0" column="4">
                <widget class="QLabel" name="label_6">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>XK</string>
                 </property>
@@ -1397,18 +746,6 @@
               </item>
               <item row="0" column="5">
                <widget class="QLabel" name="label_14">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>DMAX</string>
                 </property>
@@ -1419,18 +756,6 @@
               </item>
               <item row="0" column="6">
                <widget class="QLabel" name="label_19">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>SDF</string>
                 </property>
@@ -1441,18 +766,6 @@
               </item>
               <item row="1" column="0">
                <widget class="QLabel" name="label_21">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Timber</string>
                 </property>
@@ -1463,18 +776,6 @@
               </item>
               <item row="1" column="1">
                <widget class="QLineEdit" name="input_q0t">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1482,18 +783,6 @@
               </item>
               <item row="1" column="2">
                <widget class="QLineEdit" name="input_q1t">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1501,18 +790,6 @@
               </item>
               <item row="1" column="3">
                <widget class="QLineEdit" name="input_q2t">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1520,18 +797,6 @@
               </item>
               <item row="1" column="4">
                <widget class="QLineEdit" name="input_xkt">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1539,18 +804,6 @@
               </item>
               <item row="1" column="5">
                <widget class="QLineEdit" name="input_dmaxt">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1558,18 +811,6 @@
               </item>
               <item row="1" column="6">
                <widget class="QLineEdit" name="input_sdft">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1577,18 +818,6 @@
               </item>
               <item row="2" column="0">
                <widget class="QLabel" name="label_22">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Panel</string>
                 </property>
@@ -1599,18 +828,6 @@
               </item>
               <item row="2" column="1">
                <widget class="QLineEdit" name="input_q0p">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1618,18 +835,6 @@
               </item>
               <item row="2" column="2">
                <widget class="QLineEdit" name="input_q1p">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1637,18 +842,6 @@
               </item>
               <item row="2" column="3">
                <widget class="QLineEdit" name="input_q2p">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1656,18 +849,6 @@
               </item>
               <item row="2" column="4">
                <widget class="QLineEdit" name="input_xkp">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1675,18 +856,6 @@
               </item>
               <item row="2" column="5">
                <widget class="QLineEdit" name="input_dmaxp">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1694,18 +863,6 @@
               </item>
               <item row="2" column="6">
                <widget class="QLineEdit" name="input_sdfp">
-                <property name="minimumSize">
-                 <size>
-                  <width>30</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -1714,13 +871,6 @@
              </layout>
             </item>
            </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line_6">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
           </widget>
          </item>
          <item>
@@ -1733,18 +883,6 @@
              <layout class="QGridLayout" name="gridLayout_13">
               <item row="0" column="0">
                <widget class="QLabel" name="label_18">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Frame Section</string>
                 </property>
@@ -1754,35 +892,10 @@
                </widget>
               </item>
               <item row="0" column="1">
-               <widget class="QComboBox" name="box_frame_section">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-               </widget>
+               <widget class="QComboBox" name="box_frame_section"/>
               </item>
               <item row="0" column="2">
                <widget class="QPushButton" name="button_remove_frame_section">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Remove</string>
                 </property>
@@ -1790,18 +903,6 @@
               </item>
               <item row="1" column="0">
                <widget class="QLabel" name="label_20">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Wall Section</string>
                 </property>
@@ -1811,35 +912,10 @@
                </widget>
               </item>
               <item row="1" column="1">
-               <widget class="QComboBox" name="box_wall_section">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-               </widget>
+               <widget class="QComboBox" name="box_wall_section"/>
               </item>
               <item row="1" column="2">
                <widget class="QPushButton" name="button_remove_wall_section">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Remove</string>
                 </property>
@@ -1848,13 +924,6 @@
              </layout>
             </item>
            </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line_9">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
           </widget>
          </item>
          <item>
@@ -1895,22 +964,10 @@
               <item row="0" column="0">
                <widget class="QPushButton" name="button_add_element">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Add</string>
@@ -1925,48 +982,11 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Tag</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="QLineEdit" name="input_element_tag">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
                 </property>
                </widget>
               </item>
@@ -1977,18 +997,6 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Section</string>
@@ -2006,18 +1014,6 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Node I</string>
                 </property>
@@ -2034,18 +1030,6 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Node J</string>
                 </property>
@@ -2057,66 +1041,30 @@
               <item row="2" column="0">
                <widget class="QComboBox" name="box_section">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                </widget>
               </item>
               <item row="2" column="1">
                <widget class="QComboBox" name="box_node_i">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                </widget>
               </item>
               <item row="2" column="2">
                <widget class="QComboBox" name="box_node_j">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                </widget>
               </item>
@@ -2127,18 +1075,6 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Repeat</string>
@@ -2156,98 +1092,11 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Incre X</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <widget class="QLineEdit" name="input_increix">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="2">
-               <widget class="QLineEdit" name="input_increjx">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="3">
-               <widget class="QLineEdit" name="input_repeati">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
                 </property>
                </widget>
               </item>
@@ -2259,98 +1108,11 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Incre Y</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="1">
-               <widget class="QLineEdit" name="input_increiy">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="2">
-               <widget class="QLineEdit" name="input_increjy">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="3">
-               <widget class="QLineEdit" name="input_repeatj">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
                 </property>
                </widget>
               </item>
@@ -2362,18 +1124,6 @@
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Incre Z</string>
                 </property>
@@ -2382,100 +1132,13 @@
                 </property>
                </widget>
               </item>
-              <item row="5" column="1">
-               <widget class="QLineEdit" name="input_increiz">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="2">
-               <widget class="QLineEdit" name="input_increjz">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="3">
-               <widget class="QLineEdit" name="input_repeatk">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </widget>
-              </item>
               <item row="0" column="3">
                <widget class="QComboBox" name="box_element_type">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <item>
                  <property name="text">
@@ -2499,18 +1162,6 @@
                 <property name="enabled">
                  <bool>false</bool>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <item>
                  <property name="text">
                   <string>Orient: X</string>
@@ -2523,16 +1174,82 @@
                 </item>
                </widget>
               </item>
+              <item row="3" column="3">
+               <widget class="QSpinBox" name="input_repeati">
+                <property name="value">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="3">
+               <widget class="QSpinBox" name="input_repeatj">
+                <property name="value">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="3">
+               <widget class="QSpinBox" name="input_repeatk">
+                <property name="value">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QSpinBox" name="input_element_tag">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>100000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="input_increix">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QLineEdit" name="input_increiy">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QLineEdit" name="input_increiz">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QLineEdit" name="input_increjx">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QLineEdit" name="input_increjy">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QLineEdit" name="input_increjz">
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
              </layout>
             </item>
            </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line_5">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
           </widget>
          </item>
          <item>
@@ -2543,109 +1260,11 @@
            <layout class="QVBoxLayout" name="verticalLayout_4">
             <item>
              <layout class="QGridLayout" name="gridLayout_4">
-              <item row="0" column="1">
-               <widget class="QPushButton" name="button_remove_element">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Remove</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="3">
-               <widget class="QPushButton" name="button_split_element">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>Split</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QComboBox" name="box_section_2">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
               <item row="0" column="0">
-               <widget class="QComboBox" name="box_element">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="QLineEdit" name="input_split">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </widget>
+               <widget class="QComboBox" name="box_element"/>
               </item>
               <item row="1" column="1">
                <widget class="QPushButton" name="button_change_section">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Change Section</string>
                 </property>
@@ -2653,33 +1272,41 @@
               </item>
               <item row="1" column="3">
                <widget class="QPushButton" name="button_remove_all_element">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Remove All</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QComboBox" name="box_section_2"/>
+              </item>
+              <item row="0" column="3">
+               <widget class="QPushButton" name="button_split_element">
+                <property name="text">
+                 <string>Split</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="button_remove_element">
+                <property name="text">
+                 <string>Remove</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QSpinBox" name="input_split">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>1000</number>
                 </property>
                </widget>
               </item>
              </layout>
             </item>
            </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line_4">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
           </widget>
          </item>
          <item>
@@ -2719,18 +1346,6 @@
              <layout class="QGridLayout" name="gridLayout_5">
               <item row="0" column="0" alignment="Qt::AlignHCenter">
                <widget class="QLabel" name="label_node">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Node</string>
                 </property>
@@ -2741,18 +1356,6 @@
               </item>
               <item row="0" column="1" alignment="Qt::AlignHCenter">
                <widget class="QLabel" name="label_increx">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Incre X</string>
                 </property>
@@ -2763,18 +1366,6 @@
               </item>
               <item row="0" column="2" alignment="Qt::AlignHCenter">
                <widget class="QLabel" name="label_increy">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Incre Y</string>
                 </property>
@@ -2785,18 +1376,6 @@
               </item>
               <item row="0" column="3" alignment="Qt::AlignHCenter">
                <widget class="QLabel" name="label_increz">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Incre Z</string>
                 </property>
@@ -2807,18 +1386,6 @@
               </item>
               <item row="0" column="4" alignment="Qt::AlignHCenter">
                <widget class="QLabel" name="label_repeatx">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Repear I</string>
                 </property>
@@ -2829,18 +1396,6 @@
               </item>
               <item row="0" column="5" alignment="Qt::AlignHCenter">
                <widget class="QLabel" name="label_repeaty">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Repeat J</string>
                 </property>
@@ -2851,18 +1406,6 @@
               </item>
               <item row="0" column="6" alignment="Qt::AlignHCenter">
                <widget class="QLabel" name="label_repeatz">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Repeat K</string>
                 </property>
@@ -2872,35 +1415,10 @@
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="QComboBox" name="box_node_load">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-               </widget>
+               <widget class="QComboBox" name="box_node_load"/>
               </item>
               <item row="1" column="1">
                <widget class="QLineEdit" name="input_bc_increx">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>0</string>
                 </property>
@@ -2908,18 +1426,6 @@
               </item>
               <item row="1" column="2">
                <widget class="QLineEdit" name="input_bc_increy">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>0</string>
                 </property>
@@ -2927,80 +1433,29 @@
               </item>
               <item row="1" column="3">
                <widget class="QLineEdit" name="input_bc_increz">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>0</string>
                 </property>
                </widget>
               </item>
               <item row="1" column="4">
-               <widget class="QLineEdit" name="input_bc_repeatx">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
+               <widget class="QSpinBox" name="input_bc_repeatx">
+                <property name="minimum">
+                 <number>1</number>
                 </property>
                </widget>
               </item>
               <item row="1" column="5">
-               <widget class="QLineEdit" name="input_bc_repeaty">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>1</string>
+               <widget class="QSpinBox" name="input_bc_repeaty">
+                <property name="minimum">
+                 <number>1</number>
                 </property>
                </widget>
               </item>
               <item row="1" column="6">
-               <widget class="QLineEdit" name="input_bc_repeatz">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="autoFillBackground">
-                 <bool>false</bool>
-                </property>
-                <property name="text">
-                 <string>1</string>
+               <widget class="QSpinBox" name="input_bc_repeatz">
+                <property name="minimum">
+                 <number>1</number>
                 </property>
                </widget>
               </item>
@@ -3010,19 +1465,12 @@
           </widget>
          </item>
          <item>
-          <widget class="Line" name="line_10">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-          </widget>
-         </item>
-         <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
             <widget class="QGroupBox" name="groupBox_9">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>1</horstretch>
+               <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
@@ -3034,18 +1482,6 @@
                <layout class="QHBoxLayout" name="horizontalLayout">
                 <item>
                  <widget class="QPushButton" name="button_add_bc">
-                  <property name="minimumSize">
-                   <size>
-                    <width>30</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="toolTip">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle checked/unchecked to add/remove boundary conditions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
@@ -3056,18 +1492,6 @@
                 </item>
                 <item>
                  <widget class="QPushButton" name="button_clear_bc">
-                  <property name="minimumSize">
-                   <size>
-                    <width>30</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="toolTip">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle checked/unchecked to add/remove boundary conditions&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
@@ -3082,18 +1506,6 @@
                <layout class="QGridLayout" name="gridLayout_8">
                 <item row="0" column="0">
                  <widget class="QCheckBox" name="box_x">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>X</string>
                   </property>
@@ -3101,18 +1513,6 @@
                 </item>
                 <item row="0" column="1">
                  <widget class="QCheckBox" name="box_rx">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>RX</string>
                   </property>
@@ -3120,18 +1520,6 @@
                 </item>
                 <item row="1" column="0">
                  <widget class="QCheckBox" name="box_y">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>Y</string>
                   </property>
@@ -3139,18 +1527,6 @@
                 </item>
                 <item row="1" column="1">
                  <widget class="QCheckBox" name="box_ry">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>RY</string>
                   </property>
@@ -3158,18 +1534,6 @@
                 </item>
                 <item row="2" column="0">
                  <widget class="QCheckBox" name="box_z">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>Z</string>
                   </property>
@@ -3177,18 +1541,6 @@
                 </item>
                 <item row="2" column="1">
                  <widget class="QCheckBox" name="box_rz">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>RZ</string>
                   </property>
@@ -3203,7 +1555,7 @@
             <widget class="QGroupBox" name="groupBox_10">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>2</horstretch>
+               <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
@@ -3216,22 +1568,10 @@
                 <item>
                  <widget class="QPushButton" name="button_add_load">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>60</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
                   </property>
                   <property name="toolTip">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Leave empty to remove&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -3243,18 +1583,6 @@
                 </item>
                 <item>
                  <widget class="QComboBox" name="box_load_type">
-                  <property name="minimumSize">
-                   <size>
-                    <width>50</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <item>
                    <property name="text">
                     <string>Force</string>
@@ -3275,22 +1603,10 @@
                 <item>
                  <widget class="QPushButton" name="button_clear_load">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>60</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
                   </property>
                   <property name="toolTip">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Leave empty to remove&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -3312,18 +1628,6 @@
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>30</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>X</string>
                   </property>
@@ -3334,18 +1638,6 @@
                 </item>
                 <item row="0" column="1">
                  <widget class="QLineEdit" name="input_loadx">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>0</string>
                   </property>
@@ -3359,18 +1651,6 @@
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>30</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>RX</string>
                   </property>
@@ -3381,18 +1661,6 @@
                 </item>
                 <item row="0" column="3">
                  <widget class="QLineEdit" name="input_loadrx">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>0</string>
                   </property>
@@ -3406,18 +1674,6 @@
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>30</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>Y</string>
                   </property>
@@ -3428,18 +1684,6 @@
                 </item>
                 <item row="1" column="1">
                  <widget class="QLineEdit" name="input_loady">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>0</string>
                   </property>
@@ -3453,18 +1697,6 @@
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>30</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>RY</string>
                   </property>
@@ -3475,18 +1707,6 @@
                 </item>
                 <item row="1" column="3">
                  <widget class="QLineEdit" name="input_loadry">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>0</string>
                   </property>
@@ -3500,18 +1720,6 @@
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>30</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>Z</string>
                   </property>
@@ -3522,18 +1730,6 @@
                 </item>
                 <item row="2" column="1">
                  <widget class="QLineEdit" name="input_loadz">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>0</string>
                   </property>
@@ -3547,18 +1743,6 @@
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>30</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>RZ</string>
                   </property>
@@ -3569,18 +1753,6 @@
                 </item>
                 <item row="2" column="3">
                  <widget class="QLineEdit" name="input_loadrz">
-                  <property name="minimumSize">
-                   <size>
-                    <width>40</width>
-                    <height>35</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>60</height>
-                   </size>
-                  </property>
                   <property name="text">
                    <string>0</string>
                   </property>
@@ -3608,7 +1780,7 @@
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="tab">
+       <widget class="QWidget" name="tab_analysis">
         <attribute name="title">
          <string>Analysis</string>
         </attribute>
@@ -3626,18 +1798,6 @@
              <layout class="QGridLayout" name="gridLayout_9">
               <item row="0" column="0">
                <widget class="QLabel" name="label_period">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Period (s)</string>
                 </property>
@@ -3648,18 +1808,6 @@
               </item>
               <item row="0" column="1">
                <widget class="QLineEdit" name="input_period">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>1.0</string>
                 </property>
@@ -3667,18 +1815,6 @@
               </item>
               <item row="0" column="2">
                <widget class="QLabel" name="label_unit">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Unit</string>
                 </property>
@@ -3689,18 +1825,6 @@
               </item>
               <item row="0" column="3">
                <widget class="QComboBox" name="box_unit">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <item>
                  <property name="text">
                   <string>lb-in</string>
@@ -3720,18 +1844,6 @@
               </item>
               <item row="1" column="0">
                <widget class="QCheckBox" name="check_accx">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="layoutDirection">
                  <enum>Qt::RightToLeft</enum>
                 </property>
@@ -3745,18 +1857,6 @@
                 <property name="enabled">
                  <bool>false</bool>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string/>
                 </property>
@@ -3764,18 +1864,6 @@
               </item>
               <item row="1" column="2">
                <widget class="QLabel" name="label_scale">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Scale</string>
                 </property>
@@ -3786,18 +1874,6 @@
               </item>
               <item row="1" column="3">
                <widget class="QLineEdit" name="input_scale">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>1.0</string>
                 </property>
@@ -3805,18 +1881,6 @@
               </item>
               <item row="2" column="0">
                <widget class="QCheckBox" name="check_accy">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="layoutDirection">
                  <enum>Qt::RightToLeft</enum>
                 </property>
@@ -3830,34 +1894,10 @@
                 <property name="enabled">
                  <bool>false</bool>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                </widget>
               </item>
               <item row="2" column="2">
                <widget class="QLabel" name="label_damping">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Damping Ratio (%)</string>
                 </property>
@@ -3868,18 +1908,6 @@
               </item>
               <item row="2" column="3">
                <widget class="QLineEdit" name="input_damping">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>5</string>
                 </property>
@@ -3887,18 +1915,6 @@
               </item>
               <item row="3" column="0">
                <widget class="QLabel" name="label_quad_frame">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Frame Quad.</string>
                 </property>
@@ -3907,77 +1923,8 @@
                 </property>
                </widget>
               </item>
-              <item row="3" column="1">
-               <widget class="QLineEdit" name="input_qfx">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>5</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="2">
-               <widget class="QLineEdit" name="input_qfy">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>5</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="3">
-               <widget class="QLineEdit" name="input_qfz">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>5</string>
-                </property>
-               </widget>
-              </item>
               <item row="4" column="0">
                <widget class="QLabel" name="label_quad_wall">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Wall Quad.</string>
                 </property>
@@ -3986,54 +1933,59 @@
                 </property>
                </widget>
               </item>
+              <item row="3" column="1">
+               <widget class="QSpinBox" name="input_qfx">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="value">
+                 <number>5</number>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QSpinBox" name="input_qfy">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="value">
+                 <number>5</number>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="3">
+               <widget class="QSpinBox" name="input_qfz">
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="value">
+                 <number>5</number>
+                </property>
+               </widget>
+              </item>
               <item row="4" column="1">
-               <widget class="QLineEdit" name="input_qwx">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
+               <widget class="QSpinBox" name="input_qwx">
+                <property name="minimum">
+                 <number>1</number>
                 </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>5</string>
+                <property name="value">
+                 <number>5</number>
                 </property>
                </widget>
               </item>
               <item row="4" column="2">
-               <widget class="QLineEdit" name="input_qwy">
-                <property name="minimumSize">
-                 <size>
-                  <width>100</width>
-                  <height>35</height>
-                 </size>
+               <widget class="QSpinBox" name="input_qwy">
+                <property name="minimum">
+                 <number>1</number>
                 </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>5</string>
+                <property name="value">
+                 <number>5</number>
                 </property>
                </widget>
               </item>
              </layout>
             </item>
            </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line_3">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
           </widget>
          </item>
          <item>
@@ -4046,18 +1998,6 @@
              <layout class="QGridLayout" name="gridLayout_16">
               <item row="0" column="1" alignment="Qt::AlignHCenter">
                <widget class="QLabel" name="label_10">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>F</string>
                 </property>
@@ -4068,18 +2008,6 @@
               </item>
               <item row="0" column="2" alignment="Qt::AlignHCenter">
                <widget class="QLabel" name="label_11">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>X</string>
                 </property>
@@ -4090,18 +2018,6 @@
               </item>
               <item row="0" column="3" alignment="Qt::AlignHCenter">
                <widget class="QLabel" name="label_12">
-                <property name="minimumSize">
-                 <size>
-                  <width>40</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>U</string>
                 </property>
@@ -4112,18 +2028,6 @@
               </item>
               <item row="1" column="0">
                <widget class="QLabel" name="label_2">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Relative</string>
                 </property>
@@ -4134,18 +2038,6 @@
               </item>
               <item row="1" column="1">
                <widget class="QLineEdit" name="input_relf">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>1E-3</string>
                 </property>
@@ -4153,18 +2045,6 @@
               </item>
               <item row="1" column="2">
                <widget class="QLineEdit" name="input_relx">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>1E-3</string>
                 </property>
@@ -4172,18 +2052,6 @@
               </item>
               <item row="1" column="3">
                <widget class="QLineEdit" name="input_relu">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>1E-3</string>
                 </property>
@@ -4191,18 +2059,6 @@
               </item>
               <item row="2" column="0">
                <widget class="QLabel" name="label_7">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Absolute</string>
                 </property>
@@ -4213,18 +2069,6 @@
               </item>
               <item row="2" column="1">
                <widget class="QLineEdit" name="input_absf">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>1E-3</string>
                 </property>
@@ -4232,18 +2076,6 @@
               </item>
               <item row="2" column="2">
                <widget class="QLineEdit" name="input_absx">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>1E-3</string>
                 </property>
@@ -4251,18 +2083,6 @@
               </item>
               <item row="2" column="3">
                <widget class="QLineEdit" name="input_absu">
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>1E-3</string>
                 </property>
@@ -4271,13 +2091,6 @@
              </layout>
             </item>
            </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line_11">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
           </widget>
          </item>
          <item>
@@ -4290,18 +2103,6 @@
              <layout class="QGridLayout" name="gridLayout_17">
               <item row="0" column="1">
                <widget class="QPushButton" name="button_select">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Select EXE</string>
                 </property>
@@ -4309,18 +2110,6 @@
               </item>
               <item row="1" column="1">
                <widget class="QPushButton" name="button_run">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Run</string>
                 </property>
@@ -4371,18 +2160,6 @@
              <layout class="QGridLayout" name="gridLayout_11">
               <item row="0" column="1">
                <widget class="QCheckBox" name="plot_axis">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Axis</string>
                 </property>
@@ -4393,18 +2170,6 @@
               </item>
               <item row="0" column="0">
                <widget class="QPushButton" name="reset_model">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delete all model components.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
@@ -4415,18 +2180,6 @@
               </item>
               <item row="1" column="1">
                <widget class="QCheckBox" name="plot_frame">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Frame</string>
                 </property>
@@ -4437,18 +2190,6 @@
               </item>
               <item row="1" column="0">
                <widget class="QPushButton" name="reset_view">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Reset to default view.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
@@ -4459,18 +2200,6 @@
               </item>
               <item row="1" column="2">
                <widget class="QCheckBox" name="plot_brace">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Brace</string>
                 </property>
@@ -4481,18 +2210,6 @@
               </item>
               <item row="0" column="2">
                <widget class="QCheckBox" name="plot_wall">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Wall</string>
                 </property>
@@ -4503,18 +2220,6 @@
               </item>
               <item row="1" column="3">
                <widget class="QCheckBox" name="plot_element_tag">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Element Tag</string>
                 </property>
@@ -4525,18 +2230,6 @@
               </item>
               <item row="0" column="3">
                <widget class="QCheckBox" name="plot_node_tag">
-                <property name="minimumSize">
-                 <size>
-                  <width>80</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Node Tag</string>
                 </property>
@@ -4551,13 +2244,6 @@
           </widget>
          </item>
          <item>
-          <widget class="Line" name="line_7">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-          </widget>
-         </item>
-         <item>
           <widget class="QGroupBox" name="groupBox_3">
            <property name="title">
             <string>Change Color</string>
@@ -4567,18 +2253,6 @@
              <layout class="QGridLayout" name="gridLayout_10">
               <item row="0" column="0">
                <widget class="QPushButton" name="set_color_frame">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Frame</string>
                 </property>
@@ -4586,18 +2260,6 @@
               </item>
               <item row="0" column="1">
                <widget class="QPushButton" name="set_color_wall">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Wall</string>
                 </property>
@@ -4605,18 +2267,6 @@
               </item>
               <item row="0" column="2">
                <widget class="QPushButton" name="set_color_node">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Node</string>
                 </property>
@@ -4624,18 +2274,6 @@
               </item>
               <item row="0" column="3">
                <widget class="QPushButton" name="set_color_load">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Load</string>
                 </property>
@@ -4643,18 +2281,6 @@
               </item>
               <item row="0" column="4">
                <widget class="QPushButton" name="set_color_grid">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Grid</string>
                 </property>
@@ -4662,18 +2288,6 @@
               </item>
               <item row="1" column="0">
                <widget class="QPushButton" name="set_color_truss">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Brace</string>
                 </property>
@@ -4681,18 +2295,6 @@
               </item>
               <item row="1" column="1">
                <widget class="QPushButton" name="set_color_mass">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Mass</string>
                 </property>
@@ -4700,18 +2302,6 @@
               </item>
               <item row="1" column="2">
                <widget class="QPushButton" name="set_color_bc">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>BC</string>
                 </property>
@@ -4719,18 +2309,6 @@
               </item>
               <item row="1" column="3">
                <widget class="QPushButton" name="set_color_background">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Background</string>
                 </property>
@@ -4738,18 +2316,6 @@
               </item>
               <item row="1" column="4">
                <widget class="QPushButton" name="set_color_highlight">
-                <property name="minimumSize">
-                 <size>
-                  <width>70</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>150</width>
-                  <height>60</height>
-                 </size>
-                </property>
                 <property name="text">
                  <string>Highlight</string>
                 </property>
@@ -4758,13 +2324,6 @@
              </layout>
             </item>
            </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
           </widget>
          </item>
          <item>
@@ -4778,22 +2337,10 @@
               <item row="0" column="0">
                <widget class="QLabel" name="label_axis_size">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Axis</string>
@@ -4806,22 +2353,10 @@
               <item row="0" column="1">
                <widget class="QSlider" name="slider_axis_size">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="minimum">
                  <number>0</number>
@@ -4852,22 +2387,10 @@
               <item row="0" column="2">
                <widget class="QLabel" name="label_grid_size">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Grid Size</string>
@@ -4880,22 +2403,10 @@
               <item row="0" column="3">
                <widget class="QSlider" name="slider_grid_size">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="minimum">
                  <number>0</number>
@@ -4926,22 +2437,10 @@
               <item row="1" column="0">
                <widget class="QLabel" name="label_fov">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>FOV</string>
@@ -4954,22 +2453,10 @@
               <item row="1" column="1">
                <widget class="QSlider" name="slider_fov">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="minimum">
                  <number>1</number>
@@ -5000,22 +2487,10 @@
               <item row="1" column="2">
                <widget class="QLabel" name="label_grid_num">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Grid Num</string>
@@ -5028,22 +2503,10 @@
               <item row="1" column="3">
                <widget class="QSlider" name="slider_grid_num">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="minimum">
                  <number>0</number>
@@ -5074,22 +2537,10 @@
               <item row="2" column="0">
                <widget class="QLabel" name="label_line_width">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Line</string>
@@ -5102,22 +2553,10 @@
               <item row="2" column="1">
                <widget class="QSlider" name="slider_line_width">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="minimum">
                  <number>0</number>
@@ -5148,22 +2587,10 @@
               <item row="2" column="2">
                <widget class="QLabel" name="label_point_size">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Point Size</string>
@@ -5176,22 +2603,10 @@
               <item row="2" column="3">
                <widget class="QSlider" name="slider_point_size">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="minimum">
                  <number>0</number>
@@ -5222,22 +2637,10 @@
               <item row="3" column="0">
                <widget class="QLabel" name="label_xshift">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>X Shift</string>
@@ -5250,22 +2653,10 @@
               <item row="3" column="1">
                <widget class="QSlider" name="slider_xshift">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="minimum">
                  <number>-10000</number>
@@ -5296,22 +2687,10 @@
               <item row="3" column="2">
                <widget class="QLabel" name="label_mass_size">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Mass Size</string>
@@ -5324,22 +2703,10 @@
               <item row="3" column="3">
                <widget class="QSlider" name="slider_mass_size">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="minimum">
                  <number>0</number>
@@ -5370,22 +2737,10 @@
               <item row="4" column="0">
                <widget class="QLabel" name="label_yshift">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Y Shift</string>
@@ -5398,22 +2753,10 @@
               <item row="4" column="1">
                <widget class="QSlider" name="slider_yshift">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="minimum">
                  <number>-10000</number>
@@ -5444,22 +2787,10 @@
               <item row="4" column="2">
                <widget class="QLabel" name="label_bc_size">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>BC Size</string>
@@ -5472,22 +2803,10 @@
               <item row="4" column="3">
                <widget class="QSlider" name="slider_bc_size">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="minimum">
                  <number>0</number>
@@ -5518,22 +2837,10 @@
               <item row="5" column="0">
                <widget class="QLabel" name="label_zshift">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Z Shift</string>
@@ -5546,22 +2853,10 @@
               <item row="5" column="1">
                <widget class="QSlider" name="slider_zshift">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="minimum">
                  <number>-10000</number>
@@ -5592,22 +2887,10 @@
               <item row="5" column="2">
                <widget class="QLabel" name="label_load_size">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>60</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>200</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="text">
                  <string>Load Size</string>
@@ -5620,22 +2903,10 @@
               <item row="5" column="3">
                <widget class="QSlider" name="slider_load_size">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>60</height>
-                 </size>
                 </property>
                 <property name="minimum">
                  <number>0</number>
@@ -5686,15 +2957,15 @@
       </widget>
       <widget class="ModelRenderer" name="canvas">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-         <horstretch>3</horstretch>
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
        <property name="minimumSize">
         <size>
-         <width>500</width>
-         <height>300</height>
+         <width>600</width>
+         <height>0</height>
         </size>
        </property>
       </widget>
@@ -5708,7 +2979,7 @@
      <x>0</x>
      <y>0</y>
      <width>1200</width>
-     <height>20</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -5736,21 +3007,12 @@
    <addaction name="menuEdit"/>
    <addaction name="menuHelp"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionClose">
    <property name="text">
     <string>Close</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
-   </property>
-  </action>
-  <action name="actionOptions">
-   <property name="text">
-    <string>Options</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+P</string>
    </property>
   </action>
   <action name="actionAbout">
@@ -5845,16 +3107,9 @@
  </customwidgets>
  <tabstops>
   <tabstop>tab_main</tabstop>
-  <tabstop>input_node_tag</tabstop>
   <tabstop>input_x</tabstop>
   <tabstop>input_y</tabstop>
   <tabstop>input_z</tabstop>
-  <tabstop>input_dx</tabstop>
-  <tabstop>input_dy</tabstop>
-  <tabstop>input_dz</tabstop>
-  <tabstop>input_nx</tabstop>
-  <tabstop>input_ny</tabstop>
-  <tabstop>input_nz</tabstop>
   <tabstop>button_add_node</tabstop>
   <tabstop>box_modify_type</tabstop>
   <tabstop>box_node</tabstop>
@@ -5863,13 +3118,11 @@
   <tabstop>input_modify_node_c</tabstop>
   <tabstop>button_modify_node</tabstop>
   <tabstop>box_material_type</tabstop>
-  <tabstop>input_frame_section_tag</tabstop>
   <tabstop>input_e</tabstop>
   <tabstop>input_g</tabstop>
   <tabstop>input_w</tabstop>
   <tabstop>input_h</tabstop>
   <tabstop>button_add_frame_section</tabstop>
-  <tabstop>input_wall_section_tag</tabstop>
   <tabstop>input_ls</tabstop>
   <tabstop>input_ds</tabstop>
   <tabstop>input_es</tabstop>
@@ -5888,30 +3141,18 @@
   <tabstop>input_xkp</tabstop>
   <tabstop>input_dmaxp</tabstop>
   <tabstop>input_sdfp</tabstop>
-  <tabstop>button_add_wall_section</tabstop>
   <tabstop>box_frame_section</tabstop>
   <tabstop>button_remove_frame_section</tabstop>
   <tabstop>box_wall_section</tabstop>
   <tabstop>button_remove_wall_section</tabstop>
-  <tabstop>input_element_tag</tabstop>
   <tabstop>box_element_type</tabstop>
   <tabstop>box_orient</tabstop>
   <tabstop>box_section</tabstop>
   <tabstop>box_node_i</tabstop>
   <tabstop>box_node_j</tabstop>
-  <tabstop>input_increix</tabstop>
-  <tabstop>input_increiy</tabstop>
-  <tabstop>input_increiz</tabstop>
-  <tabstop>input_increjx</tabstop>
-  <tabstop>input_increjy</tabstop>
-  <tabstop>input_increjz</tabstop>
-  <tabstop>input_repeati</tabstop>
-  <tabstop>input_repeatj</tabstop>
-  <tabstop>input_repeatk</tabstop>
   <tabstop>button_add_element</tabstop>
   <tabstop>box_element</tabstop>
   <tabstop>button_remove_element</tabstop>
-  <tabstop>input_split</tabstop>
   <tabstop>button_split_element</tabstop>
   <tabstop>box_section_2</tabstop>
   <tabstop>button_change_section</tabstop>
@@ -5920,9 +3161,6 @@
   <tabstop>input_bc_increx</tabstop>
   <tabstop>input_bc_increy</tabstop>
   <tabstop>input_bc_increz</tabstop>
-  <tabstop>input_bc_repeatx</tabstop>
-  <tabstop>input_bc_repeaty</tabstop>
-  <tabstop>input_bc_repeatz</tabstop>
   <tabstop>box_x</tabstop>
   <tabstop>box_y</tabstop>
   <tabstop>box_z</tabstop>
@@ -5947,11 +3185,6 @@
   <tabstop>box_unit</tabstop>
   <tabstop>input_scale</tabstop>
   <tabstop>input_damping</tabstop>
-  <tabstop>input_qfx</tabstop>
-  <tabstop>input_qfy</tabstop>
-  <tabstop>input_qfz</tabstop>
-  <tabstop>input_qwx</tabstop>
-  <tabstop>input_qwy</tabstop>
   <tabstop>input_relf</tabstop>
   <tabstop>input_relx</tabstop>
   <tabstop>input_relu</tabstop>

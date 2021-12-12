@@ -25,62 +25,62 @@
 class Database;
 
 class ModelRenderer final : public PlotSetting {
-Q_OBJECT
+    Q_OBJECT
 public:
-	using PlotSetting::PlotSetting;
+    using PlotSetting::PlotSetting;
 
-	void setModel(Database*);
+    void setModel(Database*);
 
 public slots:
-	void resetView();
+    void resetView();
 
 protected:
-	void initializeGL() override;
-	void paintGL() override;
-	void mousePressEvent(QMouseEvent*) override;
-	void mouseMoveEvent(QMouseEvent*) override;
-	void wheelEvent(QWheelEvent*) override;
+    void initializeGL() override;
+    void paintGL() override;
+    void mousePressEvent(QMouseEvent*) override;
+    void mouseMoveEvent(QMouseEvent*) override;
+    void wheelEvent(QWheelEvent*) override;
 
 private:
-	static const char* vertexSource;
-	static const char* fragmentSource;
+    static const char* vertexSource;
+    static const char* fragmentSource;
 
-	Database* model_ptr = nullptr;
+    Database* model_ptr = nullptr;
 
-	QOpenGLBuffer m_buffer = QOpenGLBuffer(QOpenGLBuffer::Type::VertexBuffer);
-	std::unique_ptr<QOpenGLShaderProgram> m_program = nullptr;
+    QOpenGLBuffer m_buffer = QOpenGLBuffer(QOpenGLBuffer::Type::VertexBuffer);
+    std::unique_ptr<QOpenGLShaderProgram> m_program = nullptr;
 
-	QPoint m_last_pos;
-	int m_trans_mat = 0;
+    QPoint m_last_pos;
+    int m_trans_mat = 0;
 
-	void setPlane();
+    void setPlane();
 
-	void paintAxis();
-	void paintNode();
-	void paintNodeLabel();
-	void paintElementLabel();
-	void paintElement();
-	void paintBC();
-	void paintLoad();
-	void paintMass();
+    void paintAxis();
+    void paintNode();
+    void paintNodeLabel();
+    void paintElementLabel();
+    void paintElement();
+    void paintBC();
+    void paintLoad();
+    void paintMass();
 
-	void appendFixX(std::vector<GLfloat>&, const QVector3D&) const;
-	void appendFixY(std::vector<GLfloat>&, const QVector3D&) const;
-	void appendFixZ(std::vector<GLfloat>&, const QVector3D&) const;
-	void appendFixRX(std::vector<GLfloat>&, const QVector3D&) const;
-	void appendFixRY(std::vector<GLfloat>&, const QVector3D&) const;
-	void appendFixRZ(std::vector<GLfloat>&, const QVector3D&) const;
-	void appendFixColor(std::vector<GLfloat>&) const;
+    void appendFixX(std::vector<GLfloat>&, const QVector3D&) const;
+    void appendFixY(std::vector<GLfloat>&, const QVector3D&) const;
+    void appendFixZ(std::vector<GLfloat>&, const QVector3D&) const;
+    void appendFixRX(std::vector<GLfloat>&, const QVector3D&) const;
+    void appendFixRY(std::vector<GLfloat>&, const QVector3D&) const;
+    void appendFixRZ(std::vector<GLfloat>&, const QVector3D&) const;
+    void appendFixColor(std::vector<GLfloat>&) const;
 
-	void appendLoadX(std::vector<GLfloat>&, const QVector3D&, float) const;
-	void appendLoadY(std::vector<GLfloat>&, const QVector3D&, float) const;
-	void appendLoadZ(std::vector<GLfloat>&, const QVector3D&, float) const;
-	void appendLoadRX(std::vector<GLfloat>&, const QVector3D&, float);
-	void appendLoadRY(std::vector<GLfloat>&, const QVector3D&, float);
-	void appendLoadRZ(std::vector<GLfloat>&, const QVector3D&, float);
-	void appendLoadColor(std::vector<GLfloat>&) const;
+    void appendLoadX(std::vector<GLfloat>&, const QVector3D&, float) const;
+    void appendLoadY(std::vector<GLfloat>&, const QVector3D&, float) const;
+    void appendLoadZ(std::vector<GLfloat>&, const QVector3D&, float) const;
+    void appendLoadRX(std::vector<GLfloat>&, const QVector3D&, float);
+    void appendLoadRY(std::vector<GLfloat>&, const QVector3D&, float);
+    void appendLoadRZ(std::vector<GLfloat>&, const QVector3D&, float);
+    void appendLoadColor(std::vector<GLfloat>&) const;
 
-	void renderLabel(QPainter&, const QVector3D&, const QString&) const;
+    void renderLabel(QPainter&, const QVector3D&, const QString&) const;
 };
 
 #endif // MODELRENDERER_H
