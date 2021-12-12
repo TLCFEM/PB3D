@@ -17,26 +17,24 @@ build_script:
   - qmake -config release src/PB3D.pro
   - nmake
 after_build:
-  - windeployqt release\PB3D.exe
-  - cmd: copy LICENSE release\LICENSE.txt
-  - cmd: copy README.md release\README.md
-  - cmd: copy core\PB3D.CORE.exe release\PB3D.CORE.exe
-  - cmd: mkdir release\example
-  - cmd: copy example release\example
-  - rm release/*.obj
-  - rm release/*.cpp
-  - rm release/*.h
-  - rm release/*.res
+  - cmd: mkdir deploy
+  - cmd: copy release\PB3D.exe deploy\PB3D.exe
+  - windeployqt deploy\PB3D.exe
+  - cmd: copy LICENSE deploy\LICENSE.txt
+  - cmd: copy README.md deploy\README.md
+  - cmd: copy deploy\PB3D.CORE.exe deploy\PB3D.CORE.exe
+  - cmd: mkdir deploy\example
+  - cmd: copy example deploy\example
   - cd release
-  - 7z a PB3D.zip *
+  - 7z a deploy.zip *
 artifacts:
-  - path: release/PB3D.zip
+  - path: deploy/PB3D.zip
     name: PB3D
 deploy:
   - provider: GitHub
     tag: $(PB3D_TAG)
     release: $(PB3D_TAG)
     auth_token:
-      secure: aru/WS5nguUrXfgv5bOMpDecMMzKdcBvQe5FcgY6CWva4aCHezn+rEWM0b4mllHo
+      secure: G2VFcKQ6FM7lNKSVyevBHBwwHfvZAxSttITlXyOVYyxeEJycSI3BG+Tr6ZSpHwqX
     artifact: PB3D
     force_update: true
