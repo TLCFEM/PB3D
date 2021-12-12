@@ -22,7 +22,7 @@ after_build:
   - windeployqt deploy\PB3D.exe
   - cmd: copy LICENSE deploy\LICENSE.txt
   - cmd: copy README.md deploy\README.md
-  - cmd: copy deploy\PB3D.CORE.exe deploy\PB3D.CORE.exe
+  - cmd: copy core\PB3D.CORE.exe deploy\PB3D.CORE.exe
   - cmd: mkdir deploy\example
   - cmd: copy example deploy\example
   - cd release
