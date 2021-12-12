@@ -25,8 +25,8 @@ after_build:
   - cmd: copy core\PB3D.CORE.exe deploy\PB3D.CORE.exe
   - cmd: mkdir deploy\example
   - cmd: copy example deploy\example
-  - cd release
-  - 7z a deploy.zip *
+  - cd deploy
+  - 7z a PB3D.zip *
 artifacts:
   - path: deploy/PB3D.zip
     name: PB3D
