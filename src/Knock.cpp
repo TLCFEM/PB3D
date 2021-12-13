@@ -23,19 +23,21 @@
 #include "ModelBuilder.h"
 
 int main(int argc, char* argv[]) {
+    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+
     QApplication app(argc, argv);
     QApplication::setApplicationName("PB3D");
     QApplication::setApplicationDisplayName("PB3D");
     QApplication::setOrganizationName("University of Canterbury");
     QApplication::setWindowIcon(QIcon(":/../res/UC.ico"));
 
-    auto font = QApplication::font();
-    const auto rec = QGuiApplication::primaryScreen()->availableGeometry();
-    if(std::max(rec.height(), rec.width()) > 2000)
-        font.setPointSize(14);
-    QApplication::setFont(font);
+    //    auto font = QApplication::font();
+    //    const auto rec = QGuiApplication::primaryScreen()->availableGeometry();
+    //    if(std::max(rec.height(), rec.width()) > 2000)
+    //        font.setPointSize(14);
+    //    QApplication::setFont(font);
 
-    // qApp->setStyle(QStyleFactory::create("fusion"));
+    qApp->setStyle(QStyleFactory::create("fusion"));
 
     ModelBuilder win;
     win.setWindowTitle("PB3D");
